@@ -1,0 +1,31 @@
+= Typed Serialize
+
+Typed serialize makes sure your serialized attribute is always the specified
+type. This is especially nice for serialized hashes and new models.
+
+== Example
+
+  class User < ActiveRecord::Base
+    typed_serialize :settings, Hash
+  end
+
+  User.new.settings        # => {}
+  
+  u = User.new
+  u.settings[:theme] = 1
+  u.settings               # => { :theme => 1 }
+  
+== Install
+
+As a Rails plugin:
+
+  ./script/plugin install git://github.com/jqr/typed_serialize.git 
+  
+Prefer gems?
+
+  gem sources -a http://gems.github.com
+  gem install jqr-typed_serialize
+
+
+Homepage:: http://github.com/jqr/typed_serialize
+License:: Copyright (c) 2008 Elijah Miller <mailto:elijah.miller@gmail.com>, released under the MIT license
