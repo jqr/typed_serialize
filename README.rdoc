@@ -21,10 +21,11 @@ As a Rails plugin:
 
   ./script/plugin install git://github.com/jqr/typed_serialize.git 
   
-Prefer gems?
+Prefer gems? Add this to your environment.rb and run the following command.
 
-  gem sources -a http://gems.github.com
-  gem install jqr-typed_serialize
+  config.gem 'jqr-typed_serialize', :lib => 'typed_serialize', :source => 'http://gems.github.com'
+
+  $ rake gems:install
 
 
 Homepage:: http://github.com/jqr/typed_serialize
