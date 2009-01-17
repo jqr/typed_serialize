@@ -5,6 +5,5 @@ lib/typed_serialize.rb
 LICENSE
 Manifest
 Rakefile
-README
 README.rdoc
 uninstall.rb
