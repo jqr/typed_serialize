@@ -1,1 +1,2 @@
+v0.0.2. Fixing a bug where typed_serialize would always return a new Hash.
 v0.0.1. Initial release.

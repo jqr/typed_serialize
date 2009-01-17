@@ -4,10 +4,11 @@ class ActiveRecord::Base
 
     if class_name != Object
       define_method(attr_name) do
-        if (value = super).is_a?(self.class.serialized_attributes[attr_name.to_s]) 
+        expected_class = self.class.serialized_attributes[attr_name.to_s]
+        if (value = super).is_a?(expected_class) 
           value
         else
-          self.send("#{attr_name}=", {})
+          self.send("#{attr_name}=", expected_class.new)
         end
       end
     end
