@@ -7,7 +7,7 @@ class ActiveRecord::Base
       if (value = super).is_a?(expected_class) 
         value
       else
-        self.send("#{attr_name}=", expected_class.new)
+        send("#{attr_name}=", expected_class.new)
       end
     end
   end
