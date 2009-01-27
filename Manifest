@@ -6,4 +6,5 @@ LICENSE
 Manifest
 Rakefile
 README.rdoc
+typed_serialize.gemspec
 uninstall.rb

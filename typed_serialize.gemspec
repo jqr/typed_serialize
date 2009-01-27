@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{typed_serialize}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Elijah Miller"]
-  s.date = %q{2009-01-16}
+  s.date = %q{2009-01-26}
   s.description = %q{Typed serialize makes sure your serialized attribute is always the specified type.}
   s.email = %q{elijah.miller@gmail.com}
   s.extra_rdoc_files = ["CHANGELOG", "lib/typed_serialize.rb", "LICENSE", "README.rdoc"]
-  s.files = ["CHANGELOG", "init.rb", "install.rb", "lib/typed_serialize.rb", "LICENSE", "Manifest", "Rakefile", "README.rdoc", "uninstall.rb", "typed_serialize.gemspec"]
+  s.files = ["CHANGELOG", "init.rb", "install.rb", "lib/typed_serialize.rb", "LICENSE", "Manifest", "Rakefile", "README.rdoc", "typed_serialize.gemspec", "uninstall.rb"]
   s.has_rdoc = true
   s.homepage = %q{}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Typed_serialize", "--main", "README.rdoc"]
