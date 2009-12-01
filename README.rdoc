@@ -23,7 +23,7 @@ As a Rails plugin:
   
 Prefer gems? Add this to your environment.rb and run the following command.
 
-  config.gem 'jqr-typed_serialize', :lib => 'typed_serialize', :source => 'http://gems.github.com'
+  config.gem 'typed_serialize', :source => 'http://gemcutter.org'
 
   $ rake gems:install
 
