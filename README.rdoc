@@ -28,5 +28,9 @@ Prefer gems? Add this to your environment.rb and run the following command.
   $ rake gems:install
 
 
+== Docs
+
+http://rdoc.info/projects/jqr/typed_serialize
+
 Homepage:: http://github.com/jqr/typed_serialize
 License:: Copyright (c) 2008 Elijah Miller <mailto:elijah.miller@gmail.com>, released under the MIT license
