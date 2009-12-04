@@ -23,7 +23,7 @@ As a Rails plugin:
   
 Prefer gems? Add this to your environment.rb and run the following command.
 
-  config.gem 'typed_serialize', :source => 'http://gemcutter.org'
+  config.gem 'typed_serialize'
 
   $ rake gems:install
 
