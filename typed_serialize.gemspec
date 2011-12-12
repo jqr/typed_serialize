@@ -27,4 +27,14 @@ Gem::Specification.new do |s|
     end
   else
   end
+
+  s.add_dependency 'activerecord'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'sqlite3-ruby'
+  s.add_development_dependency 'rspec'
+  if RUBY_VERSION =~/1.8.x/
+    s.add_development_dependency 'ruby-debug'
+  elsif RUBY_VERSION =~/1.9.x/
+    s.add_development_dependency 'ruby-debug19'
+  end
 end

@@ -1,14 +1,37 @@
-class ActiveRecord::Base
-  def self.typed_serialize(attr_name, class_name)
+ActiveRecord::Base.instance_eval do
+
+  def typed_serialize(attr_name, class_name, *attributes)
     serialize(attr_name, class_name)
 
     define_method(attr_name) do
-      expected_class = self.class.serialized_attributes[attr_name.to_s]
-      if (value = super()).is_a?(expected_class)
+      if (value = super()).is_a?(class_name)
         value
       else
-        send("#{attr_name}=", expected_class.new)
+        send("#{attr_name}=", class_name.new)
+      end
+    end
+    serialized_accessor(attr_name, attributes)
+  end
+
+  def serialized_accessor(holder, *attributes)
+    serialized_reader(holder, attributes)
+    serialized_writter(holder, attributes)
+  end
+
+  def serialized_reader(holder, *attributes)
+    attributes.flatten.each do |attr_name|
+      define_method(attr_name) do
+        send(holder)[attr_name]
       end
     end
   end
+
+  def serialized_writter(holder, *attributes)
+    attributes.flatten.each do |attr_name|
+      define_method("#{attr_name}=") do |value|
+        send(holder)[attr_name] = value
+      end
+    end
+  end
+
 end
