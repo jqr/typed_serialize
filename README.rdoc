@@ -31,7 +31,7 @@ type. This is especially nice for serialized hashes and new models.
   u.settings
   =>{:photo=>'/home/photos/me.png'}
 
-  or even better
+or even better
 
   class User < ActiveRecord::Base
     typed_serialize :settings, Hash, :photo, :city, :nickname
@@ -42,7 +42,7 @@ type. This is especially nice for serialized hashes and new models.
   u.city
   => 'NY'
 
-  Also avalaible serialized_reader and serialized_writter.
+Also avalaible serialized_reader and serialized_writter.
 
 == Install
 
