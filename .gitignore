@@ -1,3 +1,4 @@
 doc
 pkg
 spec/test.sqlite3
+Gemfile.lock

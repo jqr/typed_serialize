@@ -26,7 +26,7 @@ describe ActiveRecord::Base do
     mouse.used.should be_true
   end
 
-  it 'should allow serialized writter' do
+  it 'should allow serialized writer' do
     test_hash = {:size=>'Large', :weight=>'122 gr'}
     mouse = Mouse.new(test_hash)
     mouse.info.should == test_hash

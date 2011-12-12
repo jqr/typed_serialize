@@ -15,7 +15,7 @@ ActiveRecord::Base.instance_eval do
 
   def serialized_accessor(holder, *attributes)
     serialized_reader(holder, attributes)
-    serialized_writter(holder, attributes)
+    serialized_writer(holder, attributes)
   end
 
   def serialized_reader(holder, *attributes)
@@ -26,7 +26,7 @@ ActiveRecord::Base.instance_eval do
     end
   end
 
-  def serialized_writter(holder, *attributes)
+  def serialized_writer(holder, *attributes)
     attributes.flatten.each do |attr_name|
       define_method("#{attr_name}=") do |value|
         send(holder)[attr_name] = value

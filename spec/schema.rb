@@ -14,6 +14,6 @@ class Mouse < ActiveRecord::Base
 
   serialized_reader :info, :used, :port_type
 
-  serialized_writter :info, :size, :weight
+  serialized_writer :info, :size, :weight
 
 end

@@ -44,7 +44,7 @@ or even better
   u.city
   => 'NY'
 
-Also avalaible <b>serialized_reader</b> and <b>serialized_writter</b>.
+Also avalaible <b>serialized_reader</b> and <b>serialized_writer</b>.
 
 == Install
 
