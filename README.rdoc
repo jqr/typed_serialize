@@ -17,6 +17,8 @@ type. This is especially nice for serialized hashes and new models.
 
 == Define serialized attributes
 
+=== Avalaible only for Hash columns!!!
+
   class User < ActiveRecord::Base
     typed_serialize :settings, Hash
 
@@ -42,7 +44,7 @@ or even better
   u.city
   => 'NY'
 
-Also avalaible serialized_reader and serialized_writter.
+Also avalaible <b>serialized_reader</b> and <b>serialized_writter</b>.
 
 == Install
 
