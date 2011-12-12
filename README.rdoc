@@ -10,17 +10,46 @@ type. This is especially nice for serialized hashes and new models.
   end
 
   User.new.settings        # => {}
-  
+
   u = User.new
   u.settings[:theme] = 1
   u.settings               # => { :theme => 1 }
-  
+
+== Define serialized attributes
+
+  class User < ActiveRecord::Base
+    typed_serialize :settings, Hash
+
+    serialized_accessor :settings, :photo, :city, :nickname
+
+  end
+
+  u = User.new
+  u.photo = '/home/photos/me.png'
+  u.photo
+  => '/home/photos/me.png'
+  u.settings
+  =>{:photo=>'/home/photos/me.png'}
+
+  or even better
+
+  class User < ActiveRecord::Base
+    typed_serialize :settings, Hash, :photo, :city, :nickname
+
+  end
+
+  u = User.new(:city=>'NY')
+  u.city
+  => 'NY'
+
+  Also avalaible serialized_reader and serialized_writter.
+
 == Install
 
 As a Rails plugin:
 
-  ./script/plugin install git://github.com/jqr/typed_serialize.git 
-  
+  ./script/plugin install git://github.com/jqr/typed_serialize.git
+
 Prefer gems? Add this to your environment.rb and run the following command.
 
   config.gem 'typed_serialize'
